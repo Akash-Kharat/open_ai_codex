@@ -74,7 +74,7 @@ const handleSubmit = async (e) =>{
   chatContainer.scrollTop = chatContainer.scrollHeight;
   const messageDiv = document.getElementById(uniqueId);
   loader(messageDiv);
-  
+  console.log(data.get('prompt'))
   //fetch data from the server
   const response = await fetch('https://codex-lhtd.onrender.com/',{
     method:'POST',
