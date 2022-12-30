@@ -25,7 +25,7 @@ function typeText(element, text){
 
   let interval = setInterval(()=>{
     if(index < text.length){
-      element.innerHTML += text.chatAt(index);
+      element.innerHTML += text.charAt(index);
       index++;
     }else{
       clearInterval(interval);
@@ -92,8 +92,9 @@ const handleSubmit = async (e) =>{
   if(response.ok){
     const data = await response.json();
     const parseData = data.bot.trim();
-
+    console.log(parseData);
     typeText(messageDiv , parseData);
+    
 
   } else{
     const err = await response.text();
