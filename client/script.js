@@ -70,7 +70,7 @@ const handleSubmit = async (e) =>{
 
   //bot's chatstripe
   const uniqueId = generateUniqueId();
-  chatContainer.innerHTML += chatStripe(true, " ",uniqueId);
+  chatContainer.innerHTML += chatStripe(true, "",uniqueId);
   chatContainer.scrollTop = chatContainer.scrollHeight;
   const messageDiv = document.getElementById(uniqueId);
   loader(messageDiv);
@@ -92,10 +92,9 @@ const handleSubmit = async (e) =>{
   if(response.ok){
     const data = await response.json();
     const parseData = data.bot.trim();
-    // console.log(parseData);
+    console.log(parseData);
     typeText(messageDiv , parseData);
     
-
   } else{
     const err = await response.text();
     messageDiv.innerHTML = "Something went wrong";
