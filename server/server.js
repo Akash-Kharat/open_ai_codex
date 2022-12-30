@@ -5,8 +5,11 @@ import {Configuration, OpenAIApi} from "openai";
 
 dotenv.config();
 
-const configuration = new Configuration({apiKey: process.env.OPENAI_API_KEY});
-console.log(configuration)
+const configuration = new Configuration({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+// console.log(configuration)
+
 const openai = new OpenAIApi(configuration);
 
 const app = express();
@@ -24,7 +27,7 @@ app.post('/', async (req, res) => {
 
         const response = await openai.createCompletion({
 
-            model : "code-davinci-003",
+            model: "text-davinci-003",
             prompt: `${prompt}`,
             temperature : 0,
             max_tokens : 3000,
