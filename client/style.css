@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 
   nav { 
     background-color: #333; 
-    width: 80%;
+    width: 95%;
     height: 4rem;
     /* position: relative; */
     z-index: 2;
@@ -81,7 +81,7 @@ body::-webkit-scrollbar {
 
 .maxlen{
   height: 80vh;
-  width: 80vw;
+  width: 90vw;
   overflow: hidden;
 }
 #chat_container {
@@ -173,7 +173,8 @@ body::-webkit-scrollbar {
 }
 
 form {
-  width: 80%;
+  bottom: 50%;
+  width: 85%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px;
@@ -214,7 +215,7 @@ form img {
 .footer {
   color: #dcdcdc;
   display: flex;
-  
+  font-weight: bold;
   align-items: center;
   justify-content: center;
   /* position: relative; */
@@ -223,13 +224,25 @@ form img {
             bottom: 0;
             width: 100%;
 }
-
+.mobile{
+  display: none;
+}
 @media screen and (max-width:620px) {
   .desktop{
     display: none;
 
   }
   .mobile{
-    display: block;
+    display:block;
+  }
+  nav ul{
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li a{
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 }
