@@ -11,17 +11,24 @@
     <div class="app" id="home">
       <nav class="navbar">
         <img src="/favicon.ico" alt="">
-        <ul>
+        <ul class="desktop">
+          <li><a href="#home">CODEX</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#contribute">CONTRIBUTE</a></li>
+        </ul>
+        <ul class="mobile" style="display: none;">
           <li><a href="#home">CODEX</a></li>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#contact">CONTACT</a></li>
           <li><a href="#contribute">CONTRIBUTE</a></li>
         </ul>
       </nav>
-      <div id="chat_container"></div>
+      <div class="maxlen">
+          <div id="chat_container"></div>
+      </div>
       <form >
-        <textarea name="prompt" cols="1" rows="1" placeholder="Ask Codex..." >
-        </textarea>
+        <textarea name="prompt" cols="1" rows="1" placeholder="Ask Codex..." ></textarea>
         <button type="submit" > <img src="assets/send.svg" alt=""></button>
       </form>
       
