@@ -3,7 +3,7 @@
 * {
   /* font-size: 110%;
    */
-   font-size: calc(2vmin);
+   font-size: calc(2.5vmin);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -217,7 +217,8 @@ form img {
   
   align-items: center;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
+  position: absolute;
             left: 0;
             bottom: 0;
             width: 100%;
